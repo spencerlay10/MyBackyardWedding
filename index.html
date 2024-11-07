@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <p>This is a start</p>
+    <!-- Header Section -->
+    <header>
+        <h1>My Backyard Wedding</h1>
+        <p>Your Dream Wedding in the Comfort of Your Backyard</p>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Make Memories to Last a Lifetime</h2>
+        <p>We bring the beauty of a wedding venue to your backyard.</p>
+        <a href="#contact" class="button">Contact Us</a>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h3>Our Services</h3>
+        <div class="service-item">
+            <h4>Customized Decor</h4>
+            <p>From rustic to modern, we'll transform your space into your dream setting.</p>
+        </div>
+        <div class="service-item">
+            <h4>Catering & Bar Services</h4>
+            <p>Enjoy a delicious menu tailored to your taste, with full-service bar options.</p>
+        </div>
+        <div class="service-item">
+            <h4>Wedding Planning</h4>
+            <p>Let us handle the details so you can enjoy every moment of your big day.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h3>Happy Couples</h3>
+        <blockquote>
+            <p>"MyBackyardWedding made our day magical! Everything was perfect!"</p>
+            <footer>- Emma & James</footer>
+        </blockquote>
+        <blockquote>
+            <p>"Our backyard looked like a fairytale. Highly recommend!"</p>
+            <footer>- Sarah & Tom</footer>
+        </blockquote>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h3>Get in Touch</h3>
+        <form action="#" method="POST">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MyBackyardWedding. All rights reserved.</p>
+    </footer>
 </body>
 </html>
