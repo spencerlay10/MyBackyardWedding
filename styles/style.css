@@ -216,3 +216,26 @@ footer {
     font-size: 1rem;
     border-top: 1px solid #E0E0E0;
 }
+
+.faq-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.faq-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.faq-item h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+.faq-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
