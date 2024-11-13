@@ -60,7 +60,7 @@ nav ul li a:hover, nav ul li a:focus {
     text-align: center;
     color: #fff;
     height: 90vh;
-    background-image: url('../pictures/coupleDancing.jpeg');
+    background-image: url('/pictures/coupleDancing.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
