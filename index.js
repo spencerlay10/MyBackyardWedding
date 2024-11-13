@@ -12,8 +12,8 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files (e.g., CSS, images)
 app.use('/styles', express.static(path.join(__dirname, 'styles')));
 
-app.get('/home', (req, res) => {
-    res.render('index'); // This will look for 'our_story.ejs' in the 'views' folder
+app.get('/', (req, res) => {
+    res.render('index'); // This will look for 'index.ejs' in the 'views' folder
   });
 
 // Route to render the 'Our Story' page
@@ -22,11 +22,11 @@ app.get('/our_story', (req, res) => {
 });
 
 app.get('/login_page', (req, res) => {
-    res.render('login_page'); // This will look for 'our_story.ejs' in the 'views' folder
+    res.render('login_page'); // This will look for 'login_page.ejs' in the 'views' folder
   });
 
 app.get('/sign_up', (req, res) => {
-    res.render('sign_up'); // This will look for 'our_story.ejs' in the 'views' folder
+    res.render('sign_up'); // This will look for 'sign_up.ejs' in the 'views' folder
 });
 
 // Start the server
