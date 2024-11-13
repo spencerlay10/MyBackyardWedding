@@ -30,7 +30,7 @@ app.get('/login_page', (req, res) => {
 });
 
 app.get('/sign_up', (req, res) => {
-    res.render('sign_up'); // Render sign_up.ejs
+    res.render('signup_page'); // Render sign_up.ejs
 });
 
 app.get('/contact_us', (req, res) => {
@@ -41,8 +41,8 @@ app.get('/faqs', (req, res) => {
     res.render('faq_page'); // Render faq_page.ejs
 });
 
-app.get('/find', (req, res) => {
-    res.render('find_backyard'); // Render find_backyard.ejs
+app.get('/find_a_backyard', (req, res) => {
+    res.render('find_a_backyard'); // Render find_a_backyard.ejs
 });
 
 // Start the server
