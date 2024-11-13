@@ -16,21 +16,33 @@ app.use('/styles', express.static(path.join(__dirname, 'styles')));
 
 app.use('/pictures', express.static(path.join(__dirname, 'pictures')));
 
+// Define routes to render specific pages
 app.get('/home', (req, res) => {
-    res.render('index'); // This will look for 'our_story.ejs' in the 'views' folder
-  });
+    res.render('index'); // Render index.ejs for Home
+});
 
-// Route to render the 'Our Story' page
 app.get('/our_story', (req, res) => {
-  res.render('our_story'); // This will look for 'our_story.ejs' in the 'views' folder
+    res.render('our_story'); // Render our_story.ejs
 });
 
 app.get('/login_page', (req, res) => {
-    res.render('login_page'); // This will look for 'our_story.ejs' in the 'views' folder
-  });
+    res.render('login_page'); // Render login_page.ejs
+});
 
 app.get('/sign_up', (req, res) => {
-    res.render('sign_up'); // This will look for 'our_story.ejs' in the 'views' folder
+    res.render('sign_up'); // Render sign_up.ejs
+});
+
+app.get('/contact_us', (req, res) => {
+    res.render('contact_us_page'); // Render contact_us_page.ejs
+});
+
+app.get('/faqs', (req, res) => {
+    res.render('faq_page'); // Render faq_page.ejs
+});
+
+app.get('/find', (req, res) => {
+    res.render('find_backyard'); // Render find_backyard.ejs
 });
 
 // Start the server
