@@ -9,24 +9,40 @@ app.set('view engine', 'ejs');
 // Set the views directory
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 // Serve static files (e.g., CSS, images)
 app.use('/styles', express.static(path.join(__dirname, 'styles')));
 
-app.get('/', (req, res) => {
-    res.render('index'); // This will look for 'index.ejs' in the 'views' folder
-  });
+app.use('/pictures', express.static(path.join(__dirname, 'pictures')));
 
-// Route to render the 'Our Story' page
+// Define routes to render specific pages
+app.get('/home', (req, res) => {
+    res.render('index'); // Render index.ejs for Home
+});
+
 app.get('/our_story', (req, res) => {
-  res.render('our_story'); // This will look for 'our_story.ejs' in the 'views' folder
+    res.render('our_story'); // Render our_story.ejs
 });
 
 app.get('/login_page', (req, res) => {
-    res.render('login_page'); // This will look for 'login_page.ejs' in the 'views' folder
-  });
+    res.render('login_page'); // Render login_page.ejs
+});
 
 app.get('/sign_up', (req, res) => {
-    res.render('sign_up'); // This will look for 'sign_up.ejs' in the 'views' folder
+    res.render('signup_page'); // Render sign_up.ejs
+});
+
+app.get('/contact_us', (req, res) => {
+    res.render('contact_us_page'); // Render contact_us_page.ejs
+});
+
+app.get('/faqs', (req, res) => {
+    res.render('faq_page'); // Render faq_page.ejs
+});
+
+app.get('/find_a_backyard', (req, res) => {
+    res.render('find_a_backyard'); // Render find_a_backyard.ejs
 });
 
 // Start the server
