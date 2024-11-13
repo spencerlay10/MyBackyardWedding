@@ -9,6 +9,8 @@ app.set('view engine', 'ejs');
 // Set the views directory
 app.set('views', path.join(__dirname, 'views'));
 
+app.use(express.static(path.join(__dirname, 'public')))
+
 // Serve static files (e.g., CSS, images)
 app.use('/styles', express.static(path.join(__dirname, 'styles')));
 
