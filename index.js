@@ -12,6 +12,8 @@ app.set('views', path.join(__dirname, 'views'));
 // Serve static files (e.g., CSS, images)
 app.use('/styles', express.static(path.join(__dirname, 'styles')));
 
+app.use('/pictures', express.static(path.join(__dirname, 'pictures')));
+
 app.get('/home', (req, res) => {
     res.render('index'); // This will look for 'our_story.ejs' in the 'views' folder
   });
