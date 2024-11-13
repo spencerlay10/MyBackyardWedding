@@ -40,7 +40,7 @@ body {
   }
   
   .hero {
-    background-image: url('/path-to-background-image.jpg');
+    background-image: url('/pictures/coupleDancing.jpeg');
     background-size: cover;
     background-position: center;
     text-align: center;
