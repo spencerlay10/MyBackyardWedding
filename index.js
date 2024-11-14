@@ -16,10 +16,9 @@ app.use('/styles', express.static(path.join(__dirname, 'styles')));
 
 app.use('/pictures', express.static(path.join(__dirname, 'pictures')));
 
-// Define routes to render specific pages
 app.get('/home', (req, res) => {
-    res.render('index'); // Render index.ejs for Home
-});
+    res.render('index'); // This will look for 'our_story.ejs' in the 'views' folder
+  });
 
 app.get('/our_story', (req, res) => {
     res.render('our_story'); // Render our_story.ejs
