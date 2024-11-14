@@ -29,15 +29,15 @@ app.get('/login_page', (req, res) => {
     res.render('login_page'); // Render login_page.ejs
 });
 
-app.get('/sign_up', (req, res) => {
+app.get('/signup_page', (req, res) => {
     res.render('signup_page'); // Render sign_up.ejs
 });
 
-app.get('/contact_us', (req, res) => {
+app.get('/contact_us_page', (req, res) => {
     res.render('contact_us_page'); // Render contact_us_page.ejs
 });
 
-app.get('/faqs', (req, res) => {
+app.get('/faq_page', (req, res) => {
     res.render('faq_page'); // Render faq_page.ejs
 });
 
