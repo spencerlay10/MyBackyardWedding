@@ -84,7 +84,6 @@ app.get('/find_a_backyard', (req, res) => {
     res.render('find_a_backyard'); // Render find_a_backyard.ejs
 });
 
-<<<<<<< HEAD
 // Handle login form submission
 app.post('/login', async (req, res) => {
     const { email, password } = req.body;
@@ -131,7 +130,6 @@ app.get('/logout', (req, res) => {
 });
 
 
-=======
 app.post("/signup_page", async (req, res) => {
     const {
         host_first_name,
@@ -190,7 +188,6 @@ app.post("/signup_page", async (req, res) => {
     }
 });
 
->>>>>>> izzy_dev
 // Start the server
 const PORT = 3300;
 app.listen(PORT, () => {
