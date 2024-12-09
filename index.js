@@ -10,16 +10,7 @@ const knex = require("knex");
 const app = express();
 
 // set up the connection between the file and the database 
-
-const knex = require("knex") ({ 
-    client : "pg", 
-    connection : { 
-    host : "localhost", 
-    user : "postgres", 
-    password : "reese", 
-    database : "myBackyardWedding", 
-    port : 5433 } 
-    }); 
+ 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 
@@ -148,7 +139,7 @@ app.post("/signup_page", async (req, res) => {
 
     try {
         // Start a transaction to ensure both inserts succeed
-        await knex.transaction(async (trx) => {
+        await db.transaction(async (trx) => {
             // Step 1: Insert data into the Hosts table and retrieve the generated host_id
             const [host] = await trx("hosts")
                 .insert({
