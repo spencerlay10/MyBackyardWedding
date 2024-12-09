@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "name": "mybackyardwedding",
   "version": "1.0.0",
   "main": "index.js",
@@ -20,4 +21,9 @@
     "pg": "^8.13.1"
   },
   "description": ""
+=======
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+>>>>>>> Stashed changes
 }
