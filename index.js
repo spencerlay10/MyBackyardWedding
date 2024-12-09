@@ -5,7 +5,6 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const knex = require("knex");
 
 const app = express();
 
@@ -16,7 +15,7 @@ const knex = require("knex") ({
     connection : { 
     host : "localhost", 
     user : "postgres", 
-    password : "reese", 
+    password : "admin", 
     database : "myBackyardWedding", 
     port : 5433 } 
     }); 
@@ -89,7 +88,7 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        const user = await db("owners")
+        const user = await knex("owners")
             .select("*")
             .where({ owner_email: email, owner_password: password })
             .first(); // Fetch a single user record
