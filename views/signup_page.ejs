@@ -13,7 +13,7 @@
     </div>
     <nav>
         <ul>
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/find_a_backyard">Find a Backyard</a></li>
             <li><a href="/signup_page">Host Application</a></li>
             <li><a href="/our_story">Our Story</a></li>
@@ -33,72 +33,221 @@
           
           <!-- Contact Information -->
           <h2>Contact Information</h2>
-          <label for="fullName">Full Name:</label>
-          <input type="text" id="fullName" name="fullName" required>
+          <div class="mb-3">
+            <label for="host_first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="host_first_name" name="host_first_name" placeholder="Enter First Name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="host_last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="host_last_name" name="host_last_name" placeholder="Enter Last Name" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="host_email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="host_email" name="host_email" placeholder="Enter Email" required>
+        </div>
           
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone" required>
-          
-          <!-- Address Information -->
-          <h2>Address</h2>
-          <label for="address">Street Address:</label>
-          <input type="text" id="address" name="address" required>
-          
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city" required>
-          
-          <label for="state">State:</label>
-          <input type="text" id="state" name="state" required>
-          
-          <label for="zipCode">Zip Code:</label>
-          <input type="text" id="zipCode" name="zipCode" required>
+        <div class="mb-3">
+            <label for="host_phone" class="form-label">Phone</label>
+            <input type="tel" class="form-control" id="host_phone" name="host_phone" pattern="\d{10}" maxlength="10" placeholder="Enter Phone Number" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="host_address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="host_address" name="host_address" placeholder="Enter Address" required>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="host_city" class="form-label">City</label>
+            <input type="text" class="form-control" id="host_city" name="host_city" placeholder="Enter City" required>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <!--create a drop down so that the data is consistent in the database-->
+            <label for="host_state" class="form-label">State</label>
+            <select class="form-control" id="host_state" name="host_state" required>
+                <option value="" disabled selected>Select a State</option>
+                <option value="ALABAMA">Alabama</option>
+                <option value="ALASKA">Alaska</option>
+                <option value="ARIZONA">Arizona</option>
+                <option value="ARKANSAS">Arkansas</option>
+                <option value="CALIFORNIA">California</option>
+                <option value="COLORADO">Colorado</option>
+                <option value="CONNECTICUT">Connecticut</option>
+                <option value="DELAWARE">Delaware</option>
+                <option value="FLORIDA">Florida</option>
+                <option value="GEORGIA">Georgia</option>
+                <option value="HAWAII">Hawaii</option>
+                <option value="IDAHO">Idaho</option>
+                <option value="ILLINOIS">Illinois</option>
+                <option value="INDIANA">Indiana</option>
+                <option value="IOWA">Iowa</option>
+                <option value="KANSAS">Kansas</option>
+                <option value="KENTUCKY">Kentucky</option>
+                <option value="LOUISIANA">Louisiana</option>
+                <option value="MAINE">Maine</option>
+                <option value="MARYLAND">Maryland</option>
+                <option value="MASSACHUSETTS">Massachusetts</option>
+                <option value="MICHIGAN">Michigan</option>
+                <option value="MINNESOTA">Minnesota</option>
+                <option value="MISSISSIPPI">Mississippi</option>
+                <option value="MISSOURI">Missouri</option>
+                <option value="MONTANA">Montana</option>
+                <option value="NEBRASKA">Nebraska</option>
+                <option value="NEVADA">Nevada</option>
+                <option value="NEW HAMPSHIRE">New Hampshire</option>
+                <option value="NEW JERSEY">New Jersey</option>
+                <option value="NEW MEXICO">New Mexico</option>
+                <option value="NEW YORK">New York</option>
+                <option value="NORTH CAROLINA">North Carolina</option>
+                <option value="NORTH DAKOTA">North Dakota</option>
+                <option value="OHIO">Ohio</option>
+                <option value="OKLAHOMA">Oklahoma</option>
+                <option value="OREGON">Oregon</option>
+                <option value="PENNSYLVANIA">Pennsylvania</option>
+                <option value="RHODE ISLAND">Rhode Island</option>
+                <option value="SOUTH CAROLINA">South Carolina</option>
+                <option value="SOUTH DAKOTA">South Dakota</option>
+                <option value="TENNESSEE">Tennessee</option>
+                <option value="TEXAS">Texas</option>
+                <option value="UTAH">Utah</option>
+                <option value="VERMONT">Vermont</option>
+                <option value="VIRGINIA">Virginia</option>
+                <option value="WASHINGTON">Washington</option>
+                <option value="WEST VIRGINIA">West Virginia</option>
+                <option value="WISCONSIN">Wisconsin</option>
+                <option value="WYOMING">Wyoming</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="host_zip_code" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="host_zip_code" name="host_zip_code" placeholder="Enter Zip Code" required>
+        </div>
 
           <!-- Backyard Details -->
-          <h2>Backyard Details</h2>
-          <label for="capacity">Guest Capacity:</label>
-          <input type="number" id="capacity" name="capacity" required>
+          <h2>Venue Details</h2>
+          <div class="mb-3">
+            <label for="venue_name" class="form-label">Venue Name</label>
+            <input type="text" class="form-control" id="venue_name" name="venue_name" placeholder="Enter Venue Name" required>
+        </div>
+
+        <div class="mb-3">
+            <!--once the form  is complete use submit button-->
+            <label for="description" class="form-label">Venue Description</label>
+            <textarea class="form-control" id="description" name="description" rows="5" placeholder="Enter venue information"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="venue_address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="venue_address" name="venue_address" placeholder="Enter Address" required>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <label for="venue_city" class="form-label">City</label>
+            <input type="text" class="form-control" id="venue_city" name="venue_city" placeholder="Enter City" required>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <!--create a drop down so that the data is consistent in the database-->
+            <label for="venue_state" class="form-label">State</label>
+            <select class="form-control" id="venue_state" name="venue_state" required>
+                <option value="" disabled selected>Select a State</option>
+                <option value="ALABAMA">Alabama</option>
+                <option value="ALASKA">Alaska</option>
+                <option value="ARIZONA">Arizona</option>
+                <option value="ARKANSAS">Arkansas</option>
+                <option value="CALIFORNIA">California</option>
+                <option value="COLORADO">Colorado</option>
+                <option value="CONNECTICUT">Connecticut</option>
+                <option value="DELAWARE">Delaware</option>
+                <option value="FLORIDA">Florida</option>
+                <option value="GEORGIA">Georgia</option>
+                <option value="HAWAII">Hawaii</option>
+                <option value="IDAHO">Idaho</option>
+                <option value="ILLINOIS">Illinois</option>
+                <option value="INDIANA">Indiana</option>
+                <option value="IOWA">Iowa</option>
+                <option value="KANSAS">Kansas</option>
+                <option value="KENTUCKY">Kentucky</option>
+                <option value="LOUISIANA">Louisiana</option>
+                <option value="MAINE">Maine</option>
+                <option value="MARYLAND">Maryland</option>
+                <option value="MASSACHUSETTS">Massachusetts</option>
+                <option value="MICHIGAN">Michigan</option>
+                <option value="MINNESOTA">Minnesota</option>
+                <option value="MISSISSIPPI">Mississippi</option>
+                <option value="MISSOURI">Missouri</option>
+                <option value="MONTANA">Montana</option>
+                <option value="NEBRASKA">Nebraska</option>
+                <option value="NEVADA">Nevada</option>
+                <option value="NEW HAMPSHIRE">New Hampshire</option>
+                <option value="NEW JERSEY">New Jersey</option>
+                <option value="NEW MEXICO">New Mexico</option>
+                <option value="NEW YORK">New York</option>
+                <option value="NORTH CAROLINA">North Carolina</option>
+                <option value="NORTH DAKOTA">North Dakota</option>
+                <option value="OHIO">Ohio</option>
+                <option value="OKLAHOMA">Oklahoma</option>
+                <option value="OREGON">Oregon</option>
+                <option value="PENNSYLVANIA">Pennsylvania</option>
+                <option value="RHODE ISLAND">Rhode Island</option>
+                <option value="SOUTH CAROLINA">South Carolina</option>
+                <option value="SOUTH DAKOTA">South Dakota</option>
+                <option value="TENNESSEE">Tennessee</option>
+                <option value="TEXAS">Texas</option>
+                <option value="UTAH">Utah</option>
+                <option value="VERMONT">Vermont</option>
+                <option value="VIRGINIA">Virginia</option>
+                <option value="WASHINGTON">Washington</option>
+                <option value="WEST VIRGINIA">West Virginia</option>
+                <option value="WISCONSIN">Wisconsin</option>
+                <option value="WYOMING">Wyoming</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="venue_zip_code" class="form-label">Zip Code</label>
+            <input type="text" class="form-control" id="venue_zip_code" name="venue_zip_code" placeholder="Enter Zip Code" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="price_per_hour">Price per Hour</label>
+            <input type="text" id="price_per_hour" name="price_per_hour" placeholder="$0.00" required oninput="formatDollar(this)">
+            </div>
+
+
+          <div class="mb-3">
+          <label for="max_guests">Guest Capacity</label>
+          <input type="number" id="max_guests" name="max_guests" required>
+          </div>
           
-          <label for="features">Special Features:</label>
-          <textarea id="features" name="features" placeholder="Describe any unique features (e.g., garden, pond, gazebo)" rows="4"></textarea>
           
-          <!-- Amenities -->
-          <h2>Amenities</h2>
-          <label>
-              <input type="checkbox" name="amenities" value="parking">
-              Parking Available
-          </label>
-          <label>
-              <input type="checkbox" name="amenities" value="wifi">
-              Wi-Fi Available
-          </label>
-          <label>
-              <input type="checkbox" name="amenities" value="kitchen">
-              Outdoor Kitchen/Grill
-          </label>
-          <label>
-              <input type="checkbox" name="amenities" value="bathroom">
-              Restroom Access
-          </label>
-          <label>
-              <input type="checkbox" name="amenities" value="lighting">
-              Event Lighting
-          </label>
-          
-          <!-- Additional Information -->
-          <h2>Additional Information</h2>
-          <label for="rentalPrice">Rental Price (per hour):</label>
-          <input type="number" id="rentalPrice" name="rentalPrice" required>
-          
-          <label for="availability">Availability (e.g., weekends, weekdays):</label>
-          <input type="text" id="availability" name="availability" required>
+
 
           <!-- Submit Button -->
           <button type="submit">Submit</button>
       
       </form>
+
   </div>
 </body>
+
+<script>
+    function formatDollar(input) {
+        // Remove non-numeric characters except the dot
+        let value = input.value.replace(/[^0-9.]/g, '');
+        
+        // Format as a fixed dollar amount (e.g., $12.34)
+        if (value.includes('.')) {
+            let parts = value.split('.');
+            parts[1] = parts[1].substring(0, 2); // Limit to 2 decimal places
+            value = parts.join('.');
+        }
+    
+        // Update the input value
+        input.value = value ? `$${value}` : '';
+    }
+    </script>
 </html>

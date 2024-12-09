@@ -1,115 +1,5 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Body Styling */
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #F8F8F8;
-    padding: 10px;
-}
-
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 2.5rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header .logo img {
-    width: 100px;
-    height: auto;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 2rem;
-    font-family: 'Lora', serif;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover, nav ul li a:focus {
-    color: #007B5E;
-    border-bottom: 2px solid #007B5E;
-    padding-bottom: 3px;
-}
-
-/* Find a Backyard Section */
-.find-backyard {
-    padding: 3rem 2rem;
-    text-align: center;
-}
-
-.find-backyard h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    font-family: 'Playfair Display', serif;
-}
-
-.find-backyard p {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 2rem;
-}
-
-.venue-gallery {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 2rem;
-}
-
-.venue-item {
-    width: 30%;
-    text-align: center;
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.venue-item:hover {
-    transform: scale(1.05); /* Slight zoom effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border: 2px solid #007B5E; /* Adding an outline on hover */
-}
-
-.venue-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-.venue-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-    font-family: 'Lora', serif;
-}
-
-.venue-item p {
-    font-size: 1rem;
-    color: #666;
-}
-
-/* Footer */
+  /* Footer */
 footer {
     padding: 1.5rem;
     text-align: center;
@@ -117,4 +7,63 @@ footer {
     color: #333;
     font-size: 1rem;
     border-top: 1px solid #E0E0E0;
+}
+
+/* Form Styling */
+.venue-form {
+    margin: 2rem auto;
+    padding: 1.5rem;
+    max-width: 600px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.venue-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #007B5E;
+}
+
+.venue-form label {
+    font-weight: bold;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.venue-form input, .venue-form textarea, .venue-form button {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.venue-form input[type="radio"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.venue-options .venue-item {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.venue-options label {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+.venue-form button {
+    background-color: #007B5E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.venue-form button:hover {
+    background-color: #005F47;
 }
