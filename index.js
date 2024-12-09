@@ -89,8 +89,8 @@ app.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        const user = await db('owners')
-            .select('*')
+        const user = await db("owners")
+            .select("*")
             .where({ owner_email: email, owner_password: password })
             .first(); // Fetch a single user record
 
