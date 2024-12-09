@@ -10,48 +10,79 @@
 <body>
     <!-- Header Section -->
     <header>
-        <div class="logo">
-            <img src="/pictures/logo.jpeg" alt="Logo">
-        </div>
-        <nav>
-            <ul>
-                <li><a href="/home">Home</a></li>
-                <li><a href="/find_a_backyard">Find a Backyard</a></li>
-                <li><a href="/signup_page">Host Application</a></li>
-                <li><a href="/our_story">Our Story</a></li>
-                <li><a href="/contact_us_page">Contact Us</a></li>
-                <li><a href="/faq_page">FAQ's</a></li>
-                <li><a href="/login_page">Login</a></li>
-            </ul>
-        </nav>
+        <%- include('partials/navbar') %>
     </header>
 
-    <!-- Find a Backyard Section -->
+    <!-- Find a Backyard Form Section -->
     <section id="find" class="find-backyard">
         <h2>Find Your Perfect Backyard Wedding Venue</h2>
-        <p>Our backyard venues provide the perfect blend of charm and affordability for your wedding day. Browse through our collection of stunning backyard venues that offer the perfect setting for your special day.</p>
-        
-        <div class="venue-gallery">
-            <div class="venue-item">
-                <img src="pictures/backyard1.jpeg" alt="Beautiful Backyard 1">
-                <h3>Sunny Garden Retreat</h3>
-                <p>This venue features a spacious garden surrounded by lush greenery, offering a peaceful and intimate atmosphere for your wedding.</p>
+        <p>Complete the form below to find and book your dream backyard wedding venue.</p>
+
+        <form action="/submitVenueRequest" method="POST" class="venue-form">
+            <!-- Contact Information -->
+            <h3>Contact Information</h3>
+            <label for="first-name">First Name*</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Your first name" required>
+
+            <label for="last-name">Last Name*</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Your last name" required>
+
+            <label for="phone">Phone Number*</label>
+            <input type="tel" id="phone" name="phone" placeholder="801 123 4567" required>
+
+            <label for="email">Email*</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Enter any additional details"></textarea>
+
+            <!-- Event Information -->
+            <h3>Event Details</h3>
+            <label for="event-date">Event Date*</label>
+            <input type="date" id="event-date" name="event-date" required>
+
+            <label for="guest-count">Number of Guests*</label>
+            <input type="number" id="guest-count" name="guest-count" min="1" placeholder="Enter the number of guests" required>
+
+            <!-- Venue Options -->
+            <h3>Available Venues</h3>
+            <div class="venue-options">
+                <div class="venue-item">
+                    <input type="radio" id="venue1" name="venue" value="Sunny Garden Retreat" required>
+                    <label for="venue1">
+                        <strong>Sunny Garden Retreat</strong><br>
+                        Description: Spacious garden surrounded by lush greenery.<br>
+                        City: Salt Lake City, State: Utah<br>
+                        Max Capacity: 100<br>
+                        Price Per Hour: $200
+                    </label>
+                </div>
+
+                <div class="venue-item">
+                    <input type="radio" id="venue2" name="venue" value="Rustic Farm Setting">
+                    <label for="venue2">
+                        <strong>Rustic Farm Setting</strong><br>
+                        Description: Rustic farm with charming wooden structures.<br>
+                        City: Provo, State: Utah<br>
+                        Max Capacity: 150<br>
+                        Price Per Hour: $250
+                    </label>
+                </div>
+
+                <div class="venue-item">
+                    <input type="radio" id="venue3" name="venue" value="Lakeview Paradise">
+                    <label for="venue3">
+                        <strong>Lakeview Paradise</strong><br>
+                        Description: Stunning views of the lake.<br>
+                        City: Ogden, State: Utah<br>
+                        Max Capacity: 120<br>
+                        Price Per Hour: $300
+                    </label>
+                </div>
             </div>
 
-            <div class="venue-item">
-                <img src="pictures/backyard2.jpeg" alt="Beautiful Backyard 2">
-                <h3>Rustic Farm Setting</h3>
-                <p>Set in a rustic farm with charming wooden structures, this venue offers a cozy and natural environment for a beautiful wedding day.</p>
-            </div>
-
-            <div class="venue-item">
-                <img src="pictures/backyard3.jpeg" alt="Beautiful Backyard 3">
-                <h3>Lakeview Paradise</h3>
-                <p>Our Lakeview Paradise venue offers stunning views of the lake, creating the perfect backdrop for an unforgettable ceremony.</p>
-            </div>
-        </div>
-
-        <p>Contact us to inquire about availability or book a tour of one of our featured backyard venues. Let us help you create the wedding of your dreams in a setting you’ll love!</p>
+            <button type="submit" class="button">Submit</button>
+        </form>
     </section>
 
     <!-- Footer -->
