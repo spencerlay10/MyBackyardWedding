@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/styles/admin_style.css"> <!-- Link to your CSS -->
+    <style>
+        .logout-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF; /* Bootstrap primary blue color */
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome, Admin</h1>
+    </header>
+    <main>
+        <p>You are logged in as <strong><%= email %></strong>.</p>
+        <a href="/logout" class="logout-button">Logout</a> <!-- Styled as a button -->
+    </main>
+</body>
+</html>
+
