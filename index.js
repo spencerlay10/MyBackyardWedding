@@ -46,10 +46,6 @@ const db = knex({
 });
 
 app.get('/', (req, res) => {
-    res.redirect('/home'); // This will look for 'our_story.ejs' in the 'views' folder
-  });
-
-app.get('/home', (req, res) => {
     res.render('index'); // This will look for 'our_story.ejs' in the 'views' folder
   });
 
