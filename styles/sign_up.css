@@ -15,49 +15,7 @@ body {
     padding: 20px;
 }
 
-/* Header */
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.5rem 2.5rem;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    z-index: 10;
-}
 
-header .logo img {
-    width: 100px;
-    height: auto;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 1.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 2rem;
-    transition: color 0.3s;
-    font-family: "Lora";
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-    color: #007B5E;
-    border-bottom: 2px solid #007B5E;
-    padding-bottom: 3px;
-}
 
 /* Centered Form Container */
 .container {
